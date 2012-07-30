@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
 
-  resources :users
+  resources :users # Does the route for the show function.
 
   root :to => "pages#home"
   
