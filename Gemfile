@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.0.1'
+gem 'gravatar_image_tag', '0.1.0'
 
 
 group :development do
