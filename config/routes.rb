@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
 
-  resources :users # Does the route for the show function.
+  resources :users # Does the route for the show function & create user.
 
   root :to => "pages#home"
   
