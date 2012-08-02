@@ -14,8 +14,6 @@ module SessionsHelper
 		@current_user ||= user_from_remember_token
 	end
 
-	# This bit put in so the "it should sign the user in" test will pass.
-
 	  def signed_in?
 	    !current_user.nil?
 	  end
@@ -24,6 +22,10 @@ module SessionsHelper
 	  	cookies.delete(:remember_token)
 	  	self.current_user = nil
 	  end
+
+	  def deny_access
+      	redirect_to signin_path, :notice => "Please Sign In To Access This Page."
+      end
 
 	private
 
