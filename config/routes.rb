@@ -1,7 +1,8 @@
 SampleApp::Application.routes.draw do
 
   resources :users # Does the route for the show function & create user.
-  resources :sessions, :only => [:new, :create, :destroy] # These are the allowed functions.
+  resources :sessions,   :only => [:new, :create, :destroy] # These are the allowed functions.
+  resources :microposts, :only => [:create, :destroy]
 
   root :to => "pages#home"
   
