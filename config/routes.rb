@@ -1,8 +1,14 @@
 SampleApp::Application.routes.draw do
 
-  resources :users # Does the route for the show function & create user.
+  resources :users do
+    member do
+      get :following, :followers # adds routes for /users/1/following and /users/1/followers
+    end
+  end
+
   resources :sessions,   :only => [:new, :create, :destroy] # These are the allowed functions.
   resources :microposts, :only => [:create, :destroy]
+  resources :relationships, :only => [:create, :destroy]
 
   root :to => "pages#home"
   
