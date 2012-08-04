@@ -1,0 +1,5 @@
+/* We are using syntax from Prototype. We could also use JQuery - it's very similar */
+
+$("follow_form").update("<%= escape_javascript(render('users/follow')) %>")
+
+$("followers").update('<%= "#{@user.followers.count} followers" %>')
